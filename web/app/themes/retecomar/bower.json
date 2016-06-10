@@ -1,0 +1,25 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+        "inuit-defaults": "latest",
+    "inuit-responsive-settings": "latest",
+    "inuit-functions": "latest",
+    "inuit-mixins": "latest",
+    "inuit-responsive-tools": "latest",
+    "inuit-tools-widths": "latest",
+    "inuit-normalize.css": "latest",
+    "inuit-box-sizing": "latest",
+    "jquery": "~1.11.3",
+    "font-awesome": "latest",
+    "slick-carousel": "~1.6.0"
+  },
+  "overrides": {
+    
+  }
+}

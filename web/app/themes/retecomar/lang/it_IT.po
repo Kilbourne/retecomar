@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Leonardo Giacone <leonardo.giacone@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.8.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it_IT\n"
+
+#: 404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Spiacente, ma la pagina che tenti di visualizzare non esiste."
+
+#: base.php:14
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+"Tu stai usando un <strong>browser obsoleto</strong>. Per favore <a href=\\"
+"\"https://www.mozilla.org/it/firefox/new/\\\">aggiorna il tuo browser</a> "
+"per migliorare la tua esperienza di navigazione."
+
+#: category.php:5 index.php:7 search.php:5
+msgid "Sorry, no results were found."
+msgstr "Siamo spiacenti, nessun risultato trovato."
+
+#: functions.php:23
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr "Impossibile trovare %s per l’inclusione"
+
+#: lib/extras.php:32
+msgid "Continued"
+msgstr "Continua"
+
+#: lib/extras.php:101
+msgid "<p class=\"error\"><strong>ERROR</strong>: No link. </p>"
+msgstr "<p class=\"error\"><strong>Errore</strong>: nessun collegamento.</p>"
+
+#: lib/extras.php:118
+msgid "<p class=\"error\"><strong>ERROR</strong>: No post with id: </p>"
+msgstr "<p class=\"error\"><strong>Errore</strong>: nessun post con id:</p>"
+
+#: lib/setup.php:30
+msgid "Primary Navigation"
+msgstr "Navigazione Principale"
+
+#: lib/setup.php:58
+msgid "Primary"
+msgstr "Primario"
+
+#: lib/setup.php:67
+msgid "Footer"
+msgstr "Footer"
+
+#: lib/titles.php:13
+msgid "Latest Posts"
+msgstr "Ultimi Post"
+
+#: lib/titles.php:18
+#, php-format
+msgid "Search Results for %s"
+msgstr "Risultati di ricerca per %s"
+
+#: lib/titles.php:20
+msgid "Not Found"
+msgstr "Non trovato"
+
+#: templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Coomenti meno recenti"
+
+#: templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr "Commenti più recenti &rarr;"
+
+#: templates/comments.php:31
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi."
+
+#: templates/content-page.php:2 templates/content-single.php:11
+msgid "Pages:"
+msgstr "Pagine"
+
+#: dist/scripts/jquery-599d728eab.js:3
+msgid "show"
+msgstr "mostra"
+
+#: dist/scripts/jquery-599d728eab.js:3
+msgid "hide"
+msgstr "nascondi"
+
+#: dist/scripts/jquery-599d728eab.js:3
+msgid "toggle"
+msgstr "scambia"

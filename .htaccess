@@ -1,0 +1,7 @@
+
+# Turn mod_rewrite on
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_URI} !/retecomar/web/
+RewriteRule (.*) /retecomar/web/$1 [L]

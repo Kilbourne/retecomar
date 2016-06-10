@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #WRAPPERS
+\*------------------------------------*/
+
+.page-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-right: .5rem;
+    padding-left:  .5rem;    
+    @include media-query(lap-and-up) {
+        padding-right: 1rem;
+        padding-left:  1rem;
+    }
+
+}
+
+/**
+ * This is a bit of a magic number; a wrapper this wide will allow us to â€˜hangâ€™
+ * one icon out of the rest of the pageâ€™s â€˜gridâ€™. It is used primarily on the
+ * home page promo boxes.
+ */
+/*
+.wrapper--wide {
+    max-width: 1276px;
+}
+
+.page-wrapper--little{
+  max-width: 930px;
+}
+*/
+// Grid system
+
+.main {
+  width:70%;
+  float:left;
+  padding-right:1%;
+  .sidebar-primary & {
+  //  @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+  }
+}
+.sidebar {
+  padding-left:1%;
+  width:30%;
+  float:left;
+}
+.wrap.container .content.row{
+  overflow:hidden;
+  padding: 0 2%;
+}

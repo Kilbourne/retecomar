@@ -1,0 +1,26 @@
+footer.content-info{
+	font-size: 0.75rem;
+	padding: 3rem 0px;
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	>.container{
+		display: flex;
+		justify-content: space-between;
+		max-width: 1260px;
+		margin: 0px auto;
+	}
+	ul.nav{
+		margin: 0px;
+		list-style: outside none none;
+		padding: 0px;
+		white-space: nowrap;
+		>.menu-item {
+		    display: inline-block;
+		    margin-right: .5rem;
+		    > a {
+			    text-decoration: none;
+			    color: #fff;
+			}
+		}
+	}
+}
