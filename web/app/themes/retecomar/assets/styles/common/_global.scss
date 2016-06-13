@@ -1,6 +1,36 @@
 body {
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
-img{ max-width: 100%;}
+img{ max-width: 100%;height:auto;}
 .section-title{color:#FF0000;font-size:2.25rem;text-align: center;margin-top:0;margin-bottom:1rem;}
 .content-wrap{text-align: justify;}
+.page-header{ text-align: center;color:#FF0000;}
+.main > .content-wrap{
+	padding-bottom: 2rem;
+	border-bottom: 3px solid rgb(255, 0, 0);
+	margin-bottom: 2rem;
+}
+.entry-content-asset{ text-align: center;padding-bottom: 56.2%;
+height: 0px;
+position: relative;
+iframe{
+	position: absolute;
+left: 0px;
+width: 100%;
+top: 0px;
+bottom: 0px;
+height: 100%;
+}}
+
+	.music-channels{
+		text-align: center;
+		padding: 0 1% 1.5rem;
+		.music-store-list{
+			list-style: outside none none;
+			padding:0;
+			.music-store-link{
+				display: inline-block;
+				margin-right: .75rem;
+			}
+		}
+	}

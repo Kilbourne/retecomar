@@ -37,7 +37,7 @@
     >h1 {
         //color: rgb(255, 255, 255);
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     >h2 {
         text-align: center;
@@ -48,11 +48,12 @@
         >img {
             float: left;
             margin-right: 0.75rem;
+            margin-bottom: 0.75rem;
             max-width: 165px;	
         }
         p {
             margin-bottom: 0;
-            font-size: 1.125rem;
+            //font-size: 1.125rem;
         }
     }
 }
@@ -70,7 +71,7 @@
     position: relative;
     bottom: 0px;
     padding: 10px 82px;
-    background-color: rgba(0, 0, 0, 0.5);
+    //background-color: rgba(0, 0, 0, 0.5);
     //display: flex;
     //max-height: 140px;
     flex-wrap: wrap;	
@@ -105,9 +106,7 @@
                 }
                 vertical-align: top;
     
-                color: rgb(255,
-                255,
-                255);
+                color: #000;
                 h3 {
                     font-size: 1rem;
                 }

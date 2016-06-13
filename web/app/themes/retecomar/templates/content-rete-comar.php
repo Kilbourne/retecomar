@@ -6,7 +6,7 @@
   		));
   	$display='';  	
   	if(count($band)>0){
-  		echo '<h3>I componenti</h3>';
+  		echo '<h3 class="section-title">I componenti</h3>';
   	foreach ($band as $key => $componente) {
   		setup_postdata($GLOBALS['post'] =& $componente );
   		if($key===0){
@@ -23,7 +23,25 @@
             }
              ?>
   				 	<div class="desc-wrap">
-              <?php the_content(); ?>  
+              <?php the_content(); $images = get_field('galleria_componente',$componente->ID);
+$display2="";
+if( $images ): 
+$display2.="
+    <ul>";
+         foreach( $images as $image ): 
+          $display2.='<li>
+                <a href="'.$image['url'].'">
+                     <img src="'. $image['sizes']['thumbnail'].'" alt="'.  $image['alt'].'" />
+                </a>
+                <p>'. $image['caption'].'</p>
+            </li>';
+         endforeach; 
+    $display2.="</ul>";
+    if ( function_exists('slb_activate') ) {
+    $display2 = slb_activate($display2);
+}
+echo $display2;
+ endif; ?>
             </div>
   				 	
   				 </div> 

@@ -31,17 +31,24 @@
 // Grid system
 
 .main {
-  width:70%;
-  float:left;
-  padding-right:1%;
+  @include media-query(lap-and-up)
+  {
+    width:70%;
+    float:left;
+    padding-right:1%;
+  }
+
   .sidebar-primary & {
   //  @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
   }
 }
 .sidebar {
-  padding-left:1%;
-  width:30%;
-  float:left;
+  @include media-query(lap-and-up)
+  {
+    padding-left:1%;
+    width:30%;
+    float:left; 
+  }  
 }
 .wrap.container .content.row{
   overflow:hidden;

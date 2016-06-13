@@ -70,8 +70,8 @@
             //$('.disco-link[href="'+State.data.disco+'"').click();
            //}
           } );
-                    if(document.location.toString().indexOf('?componente=')>-1){
-            var searched=document.location.toString().split('?componente=')[1];
+                    if(document.location.toString().indexOf('?band=')>-1){
+            var searched=document.location.toString().split('?band=')[1];
             $('.componente-link').filter(function(){
               var splitted =this.href.split('/'),
                             location=splitted[splitted.length-1]!==''?splitted[splitted.length-1]:splitted[splitted.length-2];
@@ -89,7 +89,7 @@
 var splitted=url.split('/'),
                             location=splitted[splitted.length-1]!==''?splitted[splitted.length-1]:splitted[splitted.length-2];
             if(cached !==null){
-              History.pushState(cached, cached.data.title, '?componente='+location);
+              History.pushState(cached, cached.data.title, '?band='+location);
             }else{
             $.post( gesualdi.ajaxurl, {
                             action: 'gesualdi_disco',
@@ -102,7 +102,7 @@ var splitted=url.split('/'),
                             var data=response.data;
                             var obj ={disco:url,data:data,target:target.parentElement.id};
                             localStorage.setItem(url, JSON.stringify(obj));
-                             History.pushState(obj, data.title, '?componente='+location);
+                             History.pushState(obj, data.title, '?band='+location);
 
                           }
                         });

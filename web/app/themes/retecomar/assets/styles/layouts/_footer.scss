@@ -1,6 +1,10 @@
 footer.content-info{
 	font-size: 0.75rem;
-	padding: 3rem 0px;
+	padding: 1.5rem 0px;
+	@include media-query(lap-and-up)
+		{
+			padding: 3rem 0px;
+		}
 	background-color: rgb(0, 0, 0);
 	color: rgb(255, 255, 255);
 	>.container{
@@ -8,12 +12,23 @@ footer.content-info{
 		justify-content: space-between;
 		max-width: 1260px;
 		margin: 0px auto;
+		@include media-query(palm)
+		{
+			flex-wrap:wrap;
+		}
+		>*{
+			margin-bottom: .5rem;
+		}
 	}
 	ul.nav{
 		margin: 0px;
 		list-style: outside none none;
 		padding: 0px;
-		white-space: nowrap;
+		
+		@include media-query(lap-and-up)
+		{
+			white-space: nowrap;
+		}
 		>.menu-item {
 		    display: inline-block;
 		    margin-right: .5rem;

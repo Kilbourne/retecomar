@@ -86,7 +86,7 @@ function gesualdi_disco() {
               $thumb= '<img src="'.get_stylesheet_directory_uri().'/dist/images/avatar-placeholder.png'.'" alt=""> ';
             }
       
-      $strumento=get_field('strumento',$disco->ID);
+      $strumento=is_null(get_field('strumento',$disco->ID))?'':get_field('strumento',$disco->ID);
       $excerpt=get_the_content( );
       
       wp_reset_postdata();
@@ -97,4 +97,14 @@ function gesualdi_disco() {
     wp_send_json_error($data);
     }
     wp_die();
+}
+
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\tgm_envira_define_license_key' );
+function tgm_envira_define_license_key() {
+    
+    // If the key has not already been defined, define it now.
+    if ( ! defined( 'ENVIRA_LICENSE_KEY' ) ) {
+        define( 'ENVIRA_LICENSE_KEY', 'f21b503f7793be583daab680a7f8bda7' );
+    }
+    
 }
