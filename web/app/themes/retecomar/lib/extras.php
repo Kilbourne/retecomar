@@ -88,9 +88,26 @@ function gesualdi_disco() {
       
       $strumento=is_null(get_field('strumento',$disco->ID))?'':get_field('strumento',$disco->ID);
       $excerpt=get_the_content( );
-      
+      $images = get_field('galleria_componente',$componente->ID);
+$display2="";
+if( $images ): 
+$display2.="
+    <ul class='componente-slider'>";
+         foreach( $images as $image ): 
+          $display2.='<li>
+                <a href="'.$image['url'].'">
+                     <img src="'. $image['sizes']['thumbnail'].'" alt="'.  $image['alt'].'" />
+                </a>
+                
+            </li>';
+         endforeach; 
+    $display2.="</ul>";
+    if ( function_exists('slb_activate') ) {
+    $display2 = slb_activate($display2);
+}
+ endif;
       wp_reset_postdata();
-      $data= array('title'=>$title,'thumb'=>$thumb,'excerpt'=>wpautop($excerpt,true),'strumento'=>$strumento);
+      $data= array('title'=>$title,'thumb'=>$thumb,'excerpt'=>wpautop($excerpt,true),'strumento'=>$strumento,'gallery'=>$display2);
         wp_send_json_success( $data );
     }else{
       $data=  __( '<p class="error"><strong>ERROR</strong>: No post with id: </p>', 'sage' ).$post_id ;

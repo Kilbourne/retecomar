@@ -8,6 +8,6 @@
       endif;
       ?>
     </nav>
-    <span>powered by MENTHALIA</span>
+    <span>powered by <a href="http://www.menthalia.com">MENTHALIA</a></span>
   </div>
 </footer>

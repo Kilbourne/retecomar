@@ -27,25 +27,25 @@
 $display2="";
 if( $images ): 
 $display2.="
-    <ul>";
+    <ul class='componente-slider'>";
          foreach( $images as $image ): 
           $display2.='<li>
                 <a href="'.$image['url'].'">
                      <img src="'. $image['sizes']['thumbnail'].'" alt="'.  $image['alt'].'" />
                 </a>
-                <p>'. $image['caption'].'</p>
+                
             </li>';
          endforeach; 
     $display2.="</ul>";
     if ( function_exists('slb_activate') ) {
     $display2 = slb_activate($display2);
 }
-echo $display2;
+
  endif; ?>
             </div>
-  				 	
-  				 </div> 
   				
+  				 </div> 
+  				<?php 	echo $display2; ?> 	
   			</div>
   <?php  
   		}

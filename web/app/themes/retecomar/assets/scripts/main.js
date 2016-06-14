@@ -18,7 +18,41 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
+        (function Menu(){
+          var isOpen=false;
+          //$(document).on('click',function(e){ if (e.which != 2 && !$(e.target).closest('#responsive-menu, #click-menu').length) { closeRM() }});
+          $(document).on('click', '#click-menu', function() { !isOpen ? openRM() : closeRM() });
+          if (window.matchMedia("(min-width: 800px)").matches && isOpen) {
+            closeRM();
+          }
+          function openRM() {
+              //$('#responsive-menu').css('display', 'block');
+              $('#responsive-menu').addClass('RMOpened');
+              $('#click-menu').addClass('click-menu-active');
+              $('#responsive-menu').stop().animate({ left: "0" }, 500, 'linear', function() {
+                  //$('#responsive-menu').css('height', $(document).height());
+                  isOpen = true
+              })
+          }
+
+          function closeRM() {
+              //$('#responsive-menu').animate({ left: -$('#responsive-menu').width() }, 500, 'linear', function() {
+                  //$('#responsive-menu').css('display', 'none');
+                  $('#responsive-menu').removeClass('RMOpened');
+                  $('#click-menu').removeClass('click-menu-active');
+                  isOpen = false
+              //})
+          }
+          $(document).click(function(e) {
+            if (e.which != 2 && !$(e.target).closest('#responsive-menu,#click-menu').length) { closeRM(); } });
+          $(window).resize(function() {
+              $('#responsive-menu').stop(true, true);
+              //$('#responsive-menu').css('height', $(document).height());
+              if ($(window).width() > 800) {
+                  //if ($('#responsive-menu').css('left') != -$('#responsive-menu').width()) { closeRM() }
+              }
+          });
+        }())
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -42,6 +76,10 @@
       }
 
     }]});
+        $('.componente-slider a').magnificPopup({
+  type:'image',  gallery:{
+    enabled:true
+  }});
         $('.componente-link').click(ajaxDisco);
          History.Adapter.bind(window,'statechange',function statechangeCallback (){ // Note: We are using statechange instead of popstate
            var State = History.getState(); // Note: We are using History.getState() instead of event.state
@@ -61,6 +99,11 @@
                             //$(target).append(src);
                             
                             $(".extended-disc-panel .desc-wrap").html(data.excerpt);
+                            if(!!data.gallery) $(".extended-disc-panel .desc-wrap").append(data.gallery);
+                            $('.componente-slider a').magnificPopup({
+  type:'image',  gallery:{
+    enabled:true
+  }});
                             $('.extended-disc-panel').fadeIn('400',function(){
                                      $('.extended-disc-panel').removeClass('not-visible');
                             });
@@ -116,7 +159,7 @@ var splitted=url.split('/'),
     // Home page
     'home': {
       init: function() {
-        // JavaScript to be fired on the home page
+        $('.home-slider').slick({autoplay:true,arrows:false,adaptiveHeight:true,infinite:true});
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

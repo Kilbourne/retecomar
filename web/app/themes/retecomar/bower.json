@@ -17,7 +17,10 @@
     "inuit-box-sizing": "latest",
     "jquery": "~1.11.3",
     "font-awesome": "latest",
-    "slick-carousel": "~1.6.0"
+     "inuit-print": "latest",
+     "fastclick": "~1.0.6",
+    "slick-carousel": "~1.6.0",
+    "magnific-popup":"latest"
   },
   "overrides": {
     

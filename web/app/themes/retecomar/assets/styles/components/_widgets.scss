@@ -35,4 +35,51 @@ ul.accordion{
 		&.widget.ink-accordion-2{overflow:hidden;}
 		h3{color:#FF0000;font-size:2.25rem;text-align: center;margin-top:0;margin-bottom:1rem;}
 	}
+	.social-list{
+		list-style: none;
+		padding-left: 0px;
+		font-size: 0px;
+max-width: 210px;
+display: block;
+margin: 0px auto;
+		li{
+			display: inline-block;
+			width: 25%;
+margin: 10px 0;
+padding: 0 2%;
+		}
+		.social-link{
+		width: 100%;
+height: 0;
+
+background-size: 100% 100%;
+display: inline-block;
+background-repeat: no-repeat;
+padding-bottom: 100%;
+			&.yt{ background-image:url(../images/youtube.png);}
+			&.fb{ background-image:url(../images/fb.png);}
+			&.twi{ background-image:url(../images/twitter.png);}
+			&.spf{ background-image:url(../images/spotifiy.png);}
+			&.rvb{ background-image:url(../images/rvb.png);}
+			&.gp{ background-image:url(../images/google+.png);}
+			&.bc{ background-image:url(../images/basecamp.png);}
+			&.sc{ background-image:url(../images/soundscloud.png);}
+
+		}
+	}
+}
+
+object.StefanoAI-youtube-responsive{
+	position:relative;
+	display:block;
+	width:100%;
+	height:0;
+	padding-bottom: 56.25%;
+	>iframe{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
 }

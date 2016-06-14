@@ -14,6 +14,8 @@ web/.htaccess
 db-sync
 sql-dump-*.sql
 
+.htaccess
+
 # Dotenv
 .env
 .env.*

@@ -2,6 +2,14 @@ body {
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 img{ max-width: 100%;height:auto;}
+
+a { -webkit-transition: color .4s; transition: color .4s; color: #265C83; text-decoration: none;}
+
+a:link, a:visited { color: #265C83; }
+
+a:hover { color: #7FDBFF; }
+
+a:active { -webkit-transition: color .3s; transition: color .3s; color: #007BE6; }
 .section-title{color:#FF0000;font-size:2.25rem;text-align: center;margin-top:0;margin-bottom:1rem;}
 .content-wrap{text-align: justify;}
 .page-header{ text-align: center;color:#FF0000;}
@@ -34,3 +42,18 @@ height: 100%;
 			}
 		}
 	}
+	.componente-slider{
+	list-style: outside none none;
+overflow: hidden;
+padding: 0px;
+li{
+	display: inline-block;
+float: left;
+max-width: 90px;
+margin-right: 3%;
+border: 1px solid #bdb6b6;
+font-size:0;
+}
+
+}  
+#slb_viewer_wrap .slb_theme_slb_default .slb_details{ display:none; }

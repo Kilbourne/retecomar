@@ -1,0 +1,42 @@
+body.admin-bar{
+		 
+	 
+		@media screen and ( max-width: 782px ) {
+			#responsive_menu_pro_button{
+			margin-top: 46px !important;
+		}
+
+	 }
+}
+
+#responsive_menu_pro{
+
+	
+	&.responsive_menu_pro_opened{margin-top:80px !important;padding-top:0 !important;padding-bottom: 0 !important;}
+	#responsive_menu_pro_menu{
+		li{
+			&.active{
+				a{
+					color:#FF0000 !important;
+				}
+			}
+			&.active,&:hover{
+				a{
+					font-weight: 800;
+				}
+			}
+		} 
+
+	}
+}
+body.admin-bar{
+		 
+	 			#responsive_menu_pro {
+		margin-top: 112px !important;	
+		}
+		@media screen and ( max-width: 782px ) {
+		#responsive_menu_pro {
+		margin-top: 126px !important;	
+		}
+	 }
+}

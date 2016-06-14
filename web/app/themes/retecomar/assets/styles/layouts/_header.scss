@@ -3,11 +3,15 @@ header.banner{
 	margin-bottom: 1.625rem;
 	border-bottom: 5px solid #7F7F7F;
 	font-size: 0;
+
 	>.container{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		font-size: 1rem;
+		@media(max-width:550px ){
+			flex-wrap:wrap;
+		}
 	}
 	.nav-primary{
 		flex-grow: 2;
@@ -49,5 +53,26 @@ header.banner{
 			}
 		}
 	}
-	
+		@include media-query(palm)
+	{
+		.brand{
+			margin-left:75px;
+		}
+	}
+			@media(max-width:550px ){
+	.brand{
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.music-channels{
+			display: block;
+margin: 0px auto;
+		}
+		}
+}
+
+.home-slider{
+	list-style: outside none none;
+
+padding: 0px;
 }

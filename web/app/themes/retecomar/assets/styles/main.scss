@@ -13,6 +13,7 @@
 @import "../../bower_components/inuit-normalize.css/_generic.normalize.scss";
 @import "../../bower_components/inuit-box-sizing/_generic.box-sizing.scss";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/inuit-print/_trumps.print.scss";
 @import "../../bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
@@ -22,6 +23,7 @@
 //@import "components/forms";
 @import "components/grid";
 //@import "components/fonts.scss";
+@import "components/responsive-menu";
 @import "components/wp-classes";
 @import "components/componenti-list";
 @import "components/widgets";

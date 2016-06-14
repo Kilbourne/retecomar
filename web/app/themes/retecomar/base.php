@@ -21,14 +21,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-       <div id="click-menu" class=" 
-     overlay" role="button" aria-label="Responsive Menu Button">
 
-    <div class="threeLines" id="RM3Lines">       
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
 
 </div>
 <div class="page-wrapper">
