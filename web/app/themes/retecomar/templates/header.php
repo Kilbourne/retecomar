@@ -48,8 +48,10 @@
                 
             </li>
         <?php endforeach; ?>
-    </ul> <?php }else{ ?>
-  <div class="head-big-image-wrap"><img src="<?php echo get_stylesheet_directory_uri().'/dist/images/img_6402.jpg'; ?>" alt="Foto di gruppo Rete Co'mar"> </div>
+    </ul> <?php }else{ 
+      $main_image=get_field('main_image','option');
+      ?>
+  <div class="head-big-image-wrap"><img src="<?php echo  $main_image; ?>" alt="Foto di gruppo Rete Co'mar"> </div>
   <?php   } ?>
 </header>
 <?php echo do_shortcode('[responsive_menu_pro] ' ); ?>

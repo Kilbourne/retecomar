@@ -13,7 +13,7 @@ function setup() {
   add_theme_support('soil-clean-up');
   add_theme_support('soil-nav-walker');
   add_theme_support('soil-nice-search');
-  add_theme_support('soil-jquery-cdn');
+  //add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
 
   // Make theme available for translation
@@ -43,7 +43,11 @@ function setup() {
   // Enable HTML5 markup support
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
-acf_add_options_page();
+
+acf_add_options_page(array(
+  
+  
+  'page_title' => 'Tema Rete Comar'));
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
   add_editor_style(Assets\asset_path('styles/main.css'));
@@ -96,7 +100,7 @@ function display_sidebar() {
  */
 function assets() {
   wp_enqueue_style('sage-css', Assets\asset_path('styles/main.css'), false, null);
-
+ 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
@@ -108,3 +112,27 @@ function assets() {
 
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+function enqueue_jquery(){
+  wp_deregister_script('jquery' );
+wp_enqueue_script( 'jquery', Assets\asset_path('scripts/jquery.js'), false, null, true );
+}
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_jquery', 1);
+function js_async_attr($tag){
+
+    # Do not add async to these scripts
+    $scripts_to_exclude = array('jquery','envira-min');
+
+
+    foreach($scripts_to_exclude as $exclude_script){
+        if(true == strpos($tag, $exclude_script ) )
+        return $tag;
+    }
+
+    # Add async to all remaining scripts
+    return str_replace( ' src', ' async="async" src', $tag );
+
+}
+  if(!is_admin()){
+add_filter( 'script_loader_tag', __NAMESPACE__ . '\\js_async_attr', 10 );
+  }

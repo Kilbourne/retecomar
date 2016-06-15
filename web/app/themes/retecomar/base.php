@@ -39,11 +39,12 @@ use Roots\Sage\Wrapper;
     </div><!-- /.wrap -->
     </div>
     <?php
+      get_template_part('templates/footer');
       do_action('get_footer');
       ?>
       <script async src='https://www.google-analytics.com/analytics.js'></script>
     <?php
-      get_template_part('templates/footer');
+      
       wp_footer();
     ?>
     

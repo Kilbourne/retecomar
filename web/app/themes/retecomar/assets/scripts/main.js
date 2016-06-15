@@ -10,7 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-(function($) {
+;;(function($) {
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
@@ -84,9 +84,8 @@
          History.Adapter.bind(window,'statechange',function statechangeCallback (){ // Note: We are using statechange instead of popstate
            var State = History.getState(); // Note: We are using History.getState() instead of event.state
            var data=State.data.data,
-
            p=$('#'+State.data.target);
-
+if (typeof data != 'undefined'){
                                        $('.extended-disc-panel').fadeOut('400', function() {
                                         
                               $('.slick-track>li.active').add(p).toggleClass('active');
@@ -99,7 +98,10 @@
                             //$(target).append(src);
                             
                             $(".extended-disc-panel .desc-wrap").html(data.excerpt);
-                            if(!!data.gallery) $(".extended-disc-panel .desc-wrap").append(data.gallery);
+                            if(!!data.gallery){
+                              $('.componente-slider').remove();
+                              $(".extended-disc-panel").append(data.gallery);
+                            } 
                             $('.componente-slider a').magnificPopup({
   type:'image',  gallery:{
     enabled:true
@@ -112,6 +114,7 @@
            //if(State.data.disco){
             //$('.disco-link[href="'+State.data.disco+'"').click();
            //}
+         }
           } );
                     if(document.location.toString().indexOf('?band=')>-1){
             var searched=document.location.toString().split('?band=')[1];

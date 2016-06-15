@@ -1,14 +1,30 @@
 {
   "dependencies": {
     "main.js": {
+      "vendor":[
+        
+        "../../plugins/widgets-for-siteorigin/statics/modernizr.js",
+        "../../plugins/widgets-for-siteorigin/statics/foundation.js",
+        "../../plugins/responsive-menu-pro/public/js/touch.js",
+        "../../plugins/widgets-for-siteorigin/widgets/ink-ardn-widget/scripts/accordion.js",
+        "../../plugins/widgets-for-siteorigin/widgets/ink-ardn-widget/scripts/accordion.init.js",
+        "../../plugins/so-widgets-bundle/widgets/contact/js/contact.min.js",
+        "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js"
+        
+      ],
       "files": [
-        "scripts/main.js",
-              "scripts/jquery.event.move.js",
-        "scripts/jquery.history.js"
+      "scripts/jquery.event.move.js",
+        "scripts/jquery.history.js",
+        "scripts/main.js"        
       ],
       "main": true
     },
     "main.css": {
+      "vendor":[
+        "../../plugins/responsive-menu-pro-data/css/responsive-menu-pro-1.css",
+        "../../plugins/widgets-for-siteorigin/widgets/ink-ardn-widget/styles/accordion.css",
+        "../../plugins/widgets-for-siteorigin/inc/../statics/defaults.css"
+      ],
       "files": [
         "styles/main.scss"
       ],

@@ -23,7 +23,11 @@
             }
              ?>
   				 	<div class="desc-wrap">
-              <?php the_content(); $images = get_field('galleria_componente',$componente->ID);
+              <?php the_content();  ?>
+            </div>
+  				
+  				 </div> 
+  				<?php $images = get_field('galleria_componente',$componente->ID);
 $display2="";
 if( $images ): 
 $display2.="
@@ -41,11 +45,7 @@ $display2.="
     $display2 = slb_activate($display2);
 }
 
- endif; ?>
-            </div>
-  				
-  				 </div> 
-  				<?php 	echo $display2; ?> 	
+ endif;	echo $display2; ?> 	
   			</div>
   <?php  
   		}
