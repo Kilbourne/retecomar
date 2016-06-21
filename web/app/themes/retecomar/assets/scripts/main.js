@@ -131,7 +131,8 @@ if (typeof data != 'undefined'){
             e.preventDefault();
             var cached;
             var target=e.currentTarget,url=target.href;
-            cached=JSON.parse(localStorage.getItem(url));
+            var key =url+componenti_date[url];
+            cached=JSON.parse(localStorage.getItem(key));
 var splitted=url.split('/'),
                             location=splitted[splitted.length-1]!==''?splitted[splitted.length-1]:splitted[splitted.length-2];
             if(cached !==null){
@@ -147,7 +148,8 @@ var splitted=url.split('/'),
                           if(response.success){
                             var data=response.data;
                             var obj ={disco:url,data:data,target:target.parentElement.id};
-                            localStorage.setItem(url, JSON.stringify(obj));
+                            var key =url+componenti_date[url];
+                            localStorage.setItem(key, JSON.stringify(obj));
                              History.pushState(obj, data.title, '?band='+location);
 
                           }

@@ -125,3 +125,19 @@ function tgm_envira_define_license_key() {
     }
     
 }
+
+
+function get_componenti_date(){
+      $band=get_posts(array( 
+      "post_type"=>"componente",
+      "posts_per_page"=>-1
+      ));
+      $array=array();
+      foreach ($band as $key => $componente) {
+        setup_postdata($GLOBALS['post'] =& $componente );
+        $perma=get_the_permalink($componente->ID);
+        $array[$perma]=get_the_modified_date().' '.get_the_modified_time();  
+        wp_reset_postdata();        
+      }
+      return $array;
+}

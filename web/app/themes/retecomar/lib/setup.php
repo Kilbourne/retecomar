@@ -3,6 +3,7 @@
 namespace Roots\Sage\Setup;
 
 use Roots\Sage\Assets;
+use Roots\Sage\Extras;
 
 /**
  * Theme setup
@@ -109,7 +110,8 @@ function assets() {
         'ajaxurl'   => admin_url( 'admin-ajax.php' ),
         'nonce'     => wp_create_nonce( 'gesualdi-nonce' ))
   );
-
+  $componenti_date=Extras\get_componenti_date();
+  wp_localize_script( 'sage-js', 'componenti_date', $componenti_date );
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
