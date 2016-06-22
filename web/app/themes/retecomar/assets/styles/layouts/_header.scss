@@ -76,3 +76,37 @@ margin: 0px auto;
 
 padding: 0px;
 }
+
+.lity #credits {
+    display: block;
+    background-color: #fff;
+    padding: 3%;
+    width: 600px;
+    max-width: 100%;
+}
+.links-intro{ text-align: center;}
+.links-list{
+    list-style: outside none none;
+    margin-left: 0px;
+    font-size: 0px;
+    >.rete-link{
+        display: inline-block;
+        width: 50%;
+        @media(min-width:575px){
+            width: 25%;
+        }        
+        font-size: 1rem;
+        vertical-align: top;
+        margin-bottom: 1.25rem;
+        >a{
+            text-decoration: none;
+            padding: 0px 5%;
+            display: inline-block;
+
+            >img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
