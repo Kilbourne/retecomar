@@ -165,6 +165,7 @@ var splitted=url.split('/'),
     'home': {
       init: function() {
         $('.home-slider').slick({autoplay:true,arrows:false,adaptiveHeight:true,infinite:true});
+        $('.componente').matchHeight();
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-        "inuit-defaults": "latest",
+    "inuit-defaults": "latest",
     "inuit-responsive-settings": "latest",
     "inuit-functions": "latest",
     "inuit-mixins": "latest",
@@ -17,12 +17,11 @@
     "inuit-box-sizing": "latest",
     "jquery": "~1.11.3",
     "font-awesome": "latest",
-     "inuit-print": "latest",
-     "fastclick": "~1.0.6",
+    "inuit-print": "latest",
+    "fastclick": "~1.0.6",
     "slick-carousel": "~1.6.0",
-    "magnific-popup":"latest"
+    "magnific-popup": "latest",
+    "matchHeight": "~0.7.0"
   },
-  "overrides": {
-    
-  }
+  "overrides": {}
 }

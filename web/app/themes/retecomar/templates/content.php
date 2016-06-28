@@ -21,7 +21,9 @@ tribe_get_template_part( 'modules/meta' );
   <?php if($post->post_type==='tribe_events' && $post->post_content != ""){
   	the_content( );
   }else{ 
-     the_excerpt();} ?>
+     the_excerpt();} 
+     juiz_sps();?>
+
   </div>
   </div>
 </article>
